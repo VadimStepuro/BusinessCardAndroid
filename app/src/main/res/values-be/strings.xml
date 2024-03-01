@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">Вадзiм</string>
+    <string name="nameFieldValue">Iмя</string>
+    <string name="surnameFieldValue">Фамiлiя</string>
+    <string name="surname">Сцяпура</string>
+    <string name="birthdateFieldValue">Дзень нараджэння</string>
+    <string name="birthdate">10 Кастрычнiка 2003</string>
+    <string name="hobbyFieldValue">Хоббi</string>
+    <string name="hobby">Гра на гiтарэ</string>
+</resources>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="name">Vadim</string>
+    <string name="nameFieldValue">Name</string>
+    <string name="surnameFieldValue">Surname</string>
+    <string name="surname">Stepuro</string>
+    <string name="birthdateFieldValue">Birthdate</string>
+    <string name="birthdate">10 October 2003</string>
+    <string name="hobbyFieldValue">Hobbie</string>
+    <string name="hobby">Playing guitar</string>
+</resources>
