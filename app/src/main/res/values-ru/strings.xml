@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="name">Вадим</string>
-    <string name="nameFieldValue">Имя</string>
-    <string name="surnameFieldValue">Фамилия</string>
-    <string name="surname">Степуро</string>
-    <string name="birthdateFieldValue">День рождения</string>
-    <string name="birthdate">10 Октября 2003</string>
-    <string name="hobbyFieldValue">Хобби</string>
-    <string name="hobby">Игра на гитаре</string>
+    <string name="hint">My number lower</string>
+    <string name="hello">Привет!!!</string>
+    <string name="attempts">Попыток осталось: 5</string>
+    <string name="emptyField">Ваше поле пустое</string>
+    <string name="congrats">Поздравляем! Вы угадали!</string>
+    <string name="greaterValue">Мое число больше</string>
+    <string name="lessValue">Мое число меньше</string>
+    <string name="noAttempts">У вас не осталось попыток</string>
+    <string name="tryButtonStr">Попытаться</string>
+    <string name="restartButtonStr">Заново</string>
+    <string name="deleteStr">Удалить</string>
+    <string name="oneButtonStr">1</string>
+    <string name="twoButtonStr">2</string>
+    <string name="threeButtonStr">3</string>
+    <string name="fourButtonStr">4</string>
+    <string name="fiveButtonStr">5</string>
+    <string name="sixButtonStr">6</string>
+    <string name="sevenButtonStr">7</string>
+    <string name="eightButtonStr">8</string>
+    <string name="nineButtonStr">9</string>
+    <string name="zeroButtonStr">0</string>
+    <string name="change_difficulty">Изменить сложность</string>
+    <string name="hard">Сложно</string>
+    <string name="medium">Средне</string>
+    <string name="easy">Легко</string>
+    <string name="settings">Changing difficulty</string>
+    <string name="diaps_array">Choose difficulty</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
 </resources>

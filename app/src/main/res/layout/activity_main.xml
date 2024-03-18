@@ -1,36 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
+
+
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
-                android:id="@+id/photo"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:layout_weight="1"
-                android:background="#00000000"
-                android:scaleType="centerInside"
-                android:src="@tools:sample/avatars"
-                app:srcCompat="@drawable/photo_2023_12_27_13_00_51" />
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/hello"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="90dp" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -39,47 +36,17 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/nameField"
-                android:layout_width="match_parent"
+                android:id="@+id/attemptsLeft"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:text="@string/nameFieldValue"
-                android:visibility="visible"
-                tools:layout_editor_absoluteX="30dp"
-                tools:layout_editor_absoluteY="90dp" />
-
-            <TextView
-                android:id="@+id/name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/name"
-                tools:layout_editor_absoluteY="511dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/surnameField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/surnameFieldValue"
+                android:fontFamily="cursive"
+                android:text="@string/attempts"
+                android:textSize="16sp"
+                android:textStyle="italic"
                 tools:layout_editor_absoluteX="30dp"
                 tools:layout_editor_absoluteY="402dp" />
 
-            <TextView
-                android:id="@+id/surname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/surname"
-                tools:layout_editor_absoluteX="30dp"
-                tools:layout_editor_absoluteY="232dp" />
-
         </LinearLayout>
 
         <LinearLayout
@@ -88,42 +55,174 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/birthdateField"
-                android:layout_width="match_parent"
+                android:id="@+id/hint"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/birthdateFieldValue" />
-
-            <TextView
-                android:id="@+id/birthdate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/birthdate"
-                tools:layout_editor_absoluteY="152dp" />
+                android:layout_weight="0.5" />
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/inputText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:text="" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/hobbieField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/hobbyFieldValue" />
-
-            <TextView
-                android:id="@+id/hobbie"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:text="@string/hobby" />
-        </LinearLayout>
-
+            android:layout_weight="0.3"
+            android:onClick="onDelete"
+            android:text="@string/deleteStr" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="377dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/changeDifficultyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onChangeDifficulty"
+            android:layout_weight="1"
+            android:text="@string/change_difficulty" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="287dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.3">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="32dp"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/oneButtonStr" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/twoButtonStr" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/threeButtonStr" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.3">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/fourButtonStr" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/fiveButtonStr" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/sixButtonStr" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="138dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.3">
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/sevenButtonStr" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/eightButtonStr" />
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onDigitButtonClick"
+                android:text="@string/nineButtonStr" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/attempt"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tryButtonStr" />
+
+            <Button
+                android:id="@+id/button0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="onDigitButtonClick"
+                android:layout_weight="1"
+                android:text="@string/zeroButtonStr" />
+
+            <Button
+                android:id="@+id/clear"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClear"
+                android:text="@string/restartButtonStr" />
+        </TableRow>
+    </TableLayout>
+</android.widget.LinearLayout>
